@@ -198,10 +198,47 @@ li{
 #section-2 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 550px;
+    height: auto;
     padding: 30px;
     box-sizing: border-box;
+    background-color: #f9f9f9; /* Arka plan rengi */
+    gap: 20px; /* Sol ve sağ arasındaki boşluk */
+}
+
+.content-left {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.content-left h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 400;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+    color: #000000;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.content-left h5 {
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #dfa000;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-left p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+    text-align: justify;
 }
 
 .content-right {
@@ -217,45 +254,9 @@ li{
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    position: relative;
-    bottom: 5px;
-    left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.content-left {
-    width: 52%;
-    left: 22px;
-    position: relative;
-    margin-top: 60px;
-}
-
-.content-left h5 {
-    font-family: 'Asap', sans-serif;
-    font-weight: 400;
-    font-size: 1.4rem;
-    color: #dfa000;
-    line-height: 1.3;
-    text-align: center;
-}
-
-.content-left h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-weight: 400;
-    font-size: 2.3rem;
-    margin-bottom: 15px;
-    color: #000000;
-    line-height: 1.3;
-    text-align: center;
-
-}
-
-.content-left p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    margin-top: 20px;
-}
 /*Section-3*/
 
 #section-3{
@@ -879,6 +880,34 @@ li{
     #about-btn a{
         font-size: 12px;
     }
+
+    #section-2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content-left,
+    .content-right {
+        width: 100%;
+    }
+
+    .content-left h2 {
+        font-size: 2rem;
+    }
+
+    .content-left h5 {
+        font-size: 1.2rem;
+    }
+
+    .content-left p {
+        font-size: 0.9rem;
+    }
+
+    .content-right img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -987,6 +1016,27 @@ li{
     #about-btn a {
         font-size: 10px;
         padding: 9px;
+    }
+
+    #section-2 {
+        padding: 15px;
+    }
+
+    .content-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-left h5 {
+        font-size: 1rem;
+    }
+
+    .content-left p {
+        font-size: 0.85rem;
+    }
+
+    .content-right img {
+        border-radius: 8px;
+        max-width: 90%;
     }
 }
 
@@ -1100,11 +1150,37 @@ li{
         font-size: 9px;
         margin-left: 0;
     }
+
+    #section-2 {
+        padding: 10px;
+    }
+
+    .content-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .content-left h5 {
+        font-size: 0.9rem;
+    }
+
+    .content-left p {
+        font-size: 0.8rem;
+    }
+
+    .content-right img {
+        max-width: 85%;
+    }
 }
 
 @media (max-width: 320px) {
     html {
         font-size: 6px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Videonun düzgün şekilde ekrana sığması için */
     }
 
     video {
@@ -1114,18 +1190,15 @@ li{
         transform: translate(-50%, -50%);
         width: 100vw;
         height: 100vh;
-        object-fit: cover;
+        object-fit: cover; /* Videonun ekranı düzgün kaplaması için */
         z-index: -1;
     }
 
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    nav{
-        width: 20px;
+    nav {
+        width: 30px;
+        position: absolute;
+        top: 0;
+        z-index: 10; /* Menü video üstünde görünür */
     }
 
     .menu-toggle {
@@ -1133,7 +1206,9 @@ li{
         background: none;
         border: none;
         font-size: 20px;
+        color: white; /* Buton rengi okunaklı olmalı */
         cursor: pointer;
+        margin: 10px;
     }
 
     #menu {
@@ -1144,34 +1219,54 @@ li{
 
     #menu.open {
         max-height: 250px;
+        background-color: rgba(0, 0, 0, 0.8); /* Menü açıldığında arka plan */
+    }
+
+    #menu li {
+        list-style: none;
+        padding: 10px;
+    }
+
+    #menu a {
+        font-size: 8px;
+        color: white;
+        text-decoration: none;
     }
 
     #navigation-wrapper {
         padding: 10px;
+        background: transparent;
     }
 
-    #navigation-wrapper a {
-        font-size: 8px;
+    .context-container {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        padding: 10px 20px;
     }
 
     .context-container h1 {
         font-size: 30px;
-        padding: 12px;
+        color: white;
+        margin-bottom: 10px;
     }
 
     .welcome-text {
         font-size: 12px;
-        padding: 8px;
+        color: white;
+        margin-bottom: 20px;
     }
 
     .context-container .content-sub-context {
         font-size: 10px;
+        color: white;
         padding: 20px 20px 20px 20px;
     }
 
     .block {
         width: 100px;
         height: 50px;
+        margin: 10px auto;
     }
 
     .small-block {
@@ -1189,18 +1284,11 @@ li{
         left: -60px;
     }
 
-    .content-block-container .block:nth-child(1) .small-block,
-    .content-block-container .block:nth-child(2) .small-block,
-    .content-block-container .block:nth-child(3) .small-block {
-        width: 40px;
-        height: 40px;
-        background-size: 20px;
-    }
-    
-    #about-btn{
-        border: 1px solid black;
+    #about-btn {
         position: absolute;
-        top: 250px;
+        top: 300px;
+        border: 1px solid black;
+        padding: 5px 10px;
     }
 
     #about-btn a {
@@ -1208,8 +1296,30 @@ li{
         padding: 9px;
     }
 
-    .control-block{
+    .control-block {
         font-size: 9px;
         margin-left: 0;
+    }
+
+    #section-2 {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .content-left h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-left h5 {
+        font-size: 0.8rem;
+    }
+
+    .content-left p {
+        font-size: 0.75rem;
+        text-align: left; /* Daha okunabilir olması için hizalama sola */
+    }
+
+    .content-right img {
+        max-width: 80%;
     }
 }
