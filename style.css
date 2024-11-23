@@ -134,9 +134,9 @@ li{
     text-align: center;
     align-items: center;
     position: absolute;
-    width: 200px;
-    top: 45px;
     font-size: 25px;
+    top: 45px;
+    left: 30px;
 }
 
 .small-block {
@@ -819,13 +819,18 @@ li{
     }
 
     .context-container .content-sub-context{
-        font-size: 18px;
+        font-size: 16px;
         padding: 20px;
+        text-align: center;
+    }
+
+    .content-block-container{
+        gap: 20px;
     }
 
     .block{
         width: 200px;
-        height: 100px;
+        height: 95px;
     }
 
     .small-block{
@@ -836,7 +841,7 @@ li{
     .block span{
         font-size: 14px;
         top: 32px;
-        left: -40px;
+        left: 10px;
     }
 
     .small-block {
@@ -881,6 +886,22 @@ li{
         font-size: 8px; /* Ana font boyutunu küçültme */
     }
 
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw; /* Tüm ekran genişliğini kapla */
+        height: 100vh; /* Tüm ekran yüksekliğini kapla */
+        object-fit: cover; /* Videoyu düzgünce kırparak ekrana sığdır */
+        z-index: -1; /* Arkaya al (isteğe bağlı, başka öğeler varsa) */
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Video tam ekrana yayılırken taşmaları önle */
+    }
+
     .menu-toggle {
         display: block;
         background: none;
@@ -900,7 +921,7 @@ li{
     }
 
     #navigation-wrapper {
-        padding: 5px;
+        padding:6px;
     }
 
     #navigation-wrapper a {
@@ -908,8 +929,8 @@ li{
     }
 
     .context-container h1 {
-        font-size: 40px;
-        padding: 20px;
+        font-size: 34px;
+        padding: 14px;
     }
 
     .welcome-text {
@@ -919,8 +940,7 @@ li{
 
     .context-container .content-sub-context {
         font-size: 10px;
-        padding: 20px 20px 60px 20px;
-
+        padding: 20px 20px 50px 20px;
     }
 
     .block {
@@ -933,7 +953,7 @@ li{
         max-height: 35px;
         position: relative;
         top: -8px;
-        left: 65%;
+        left: 73%;
         z-index: 10;
     }
 
@@ -951,7 +971,22 @@ li{
         background-size: 20px;
     }
 
+    .content-container .content-block-container .management-context-span-1,
+    .content-container .content-block-container .brick-context-span-2,
+    .content-container .content-block-container .engineer-context-span-3 {
+    right: -25px;
+    font-size: 8px;
+}
+
+
+    #about-btn{
+        border: 1px solid black;
+        position: absolute;
+        top: 350px;
+    }
+
     #about-btn a {
-        font-size: 12px;
+        font-size: 10px;
+        padding: 9px;
     }
 }
