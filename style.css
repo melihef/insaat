@@ -620,9 +620,7 @@ li{
     text-decoration: underline;
     color: #333;
 }
-
 /*Footer*/
-
 #footer {
     background-color: #4a1212;
     color: #f8f8f8;
@@ -928,7 +926,7 @@ li{
     body {
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow: auto;
     }
 
     .menu-toggle {
@@ -1040,147 +1038,15 @@ li{
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
     html {
-        font-size: 6px;
-    }
-
-    video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    nav{
-        width: 20px;
-    }
-
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-    #menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    #menu.open {
-        max-height: 250px;
-    }
-
-    #navigation-wrapper {
-        padding: 10px;
-    }
-
-    #navigation-wrapper a {
         font-size: 8px;
     }
 
-    .context-container h1 {
-        font-size: 30px;
-        padding: 12px;
-    }
-
-    .welcome-text {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .context-container .content-sub-context {
-        font-size: 10px;
-        padding: 20px 20px 20px 20px;
-    }
-
-    .block {
-        width: 100px;
-        height: 50px;
-    }
-
-    .small-block {
-        max-width: 30px;
-        max-height: 30px;
-        position: relative;
-        top: -11px;
-        left: 74%;
-        z-index: 10;
-    }
-
-    .block span {
-        font-size: 9px;
-        top: 15px;
-        left: -60px;
-    }
-
-    .content-block-container .block:nth-child(1) .small-block,
-    .content-block-container .block:nth-child(2) .small-block,
-    .content-block-container .block:nth-child(3) .small-block {
-        width: 40px;
-        height: 40px;
-        background-size: 20px;
-    }
-    
-    #about-btn{
-        border: 1px solid black;
-        position: absolute;
-        top: 250px;
-    }
-
-    #about-btn a {
-        font-size: 10px;
-        padding: 9px;
-    }
-
-    .control-block{
-        font-size: 9px;
-        margin-left: 0;
-    }
-
-    #section-2 {
-        padding: 10px;
-    }
-
-    .content-left h2 {
-        font-size: 1.6rem;
-    }
-
-    .content-left h5 {
-        font-size: 0.9rem;
-    }
-
-    .content-left p {
-        font-size: 0.8rem;
-    }
-
-    .content-right img {
-        max-width: 85%;
-    }
-}
-
-@media (max-width: 320px) {
-    html {
-        font-size: 6px;
-    }
-
     body {
         margin: 0;
         padding: 0;
-        overflow: hidden; /* Videonun düzgün şekilde ekrana sığması için */
+        overflow: auto;
     }
 
     video {
@@ -1299,27 +1165,5 @@ li{
     .control-block {
         font-size: 9px;
         margin-left: 0;
-    }
-
-    #section-2 {
-        padding: 10px;
-        gap: 15px;
-    }
-
-    .content-left h2 {
-        font-size: 1.4rem;
-    }
-
-    .content-left h5 {
-        font-size: 0.8rem;
-    }
-
-    .content-left p {
-        font-size: 0.75rem;
-        text-align: left; /* Daha okunabilir olması için hizalama sola */
-    }
-
-    .content-right img {
-        max-width: 80%;
     }
 }
