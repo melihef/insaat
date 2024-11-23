@@ -22,24 +22,33 @@
 
 <body>
 <section id="section-1">
-    <div id="navigation-wrapper">
-        <nav>
-            <ul>
-                <li class="#Anasayfa">
-                    <a href="#content">Anasayfa</a>
-                </li>
-                <li class="#Hakkimizda">
-                    <a href="">Hakkımızda</a>
-                </li>
-                <li class="#İletisim">
-                    <a href="">İletişim</a>
-                </li>
-                <li class="#Hizmetlerimiz">
-                    <a href="">Hizmetlerimiz</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <section id="section-1">
+        <div id="navigation-wrapper">
+            <nav>
+                <!-- Hamburger Menü -->
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fa fa-bars"></i> <!-- Font Awesome'dan Hamburger ikonu -->
+                </button>
+        
+                <!-- Menü -->
+                <ul id="menu" class="hidden">
+                    <li class="#Anasayfa">
+                        <a href="#content">Anasayfa</a>
+                    </li>
+                    <li class="#Hakkimizda">
+                        <a href="">Hakkımızda</a>
+                    </li>
+                    <li class="#İletisim">
+                        <a href="">İletişim</a>
+                    </li>
+                    <li class="#Hizmetlerimiz">
+                        <a href="">Hizmetlerimiz</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>                
+    </section>
+    
     <div id="bg-video">
         <div class="video-block">
             <video autoplay loop muted>

@@ -75,6 +75,7 @@ li{
     transition: .1s all;
 }
 
+
 #navigation-wrapper ul a:hover{
     transition: .1s all;
     color: black;
@@ -144,36 +145,35 @@ li{
     height: 90px;
     background-color: rgba(255, 255, 255, .5);
     backdrop-filter: blur(10px);
-    display: inline-block;
-    align-items: center;
-    justify-content: flex-start;
+    display: flex; /* Kutudaki içeriği düzenlemek için flex kullanıldı */
+    align-items: center; /* Görselleri dikey olarak ortalamak */
+    justify-content: center; /* Görselleri yatay olarak ortalamak */
     border-radius: 4px;
     top: 29px;
     left: 275px;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1; /* Varsayılan z-index */
 }
 
 .content-block-container .block:nth-child(1) .small-block {
     background-image: url('img/management.png'); 
     background-size: 65px;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 2; /* Önde olması için z-index artırıldı */
 }
 
 .content-block-container .block:nth-child(2) .small-block {
     background-image: url('img/brick.png');
     background-size: 65px;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 2;
 }
 
 .content-block-container .block:nth-child(3) .small-block {
-    background-image: url('img/engineer.png'); /* Üçüncü bloğun küçük bloğu için görsel */
+    background-image: url('img/engineer.png');
     background-size: 65px;
-    background-repeat: no-repeat;
-    background-position: center;
+    z-index: 2;
 }
+
 
 #about-btn{
     display: flex;
@@ -704,6 +704,19 @@ li{
     margin: 0;
 }
 
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
 /* Genel Responsive Ayarları */
 @media (max-width: 1024px) {
     html{
@@ -711,7 +724,7 @@ li{
     }
 
     #navigation-wrapper{
-        padding: 10px;
+        padding: 20px;
     }
 
     #navigation-wrapper a{
@@ -720,6 +733,10 @@ li{
 
     .context-container h1{
         font-size: 34px;
+    }
+
+    .welcome-text{
+        font-size: 20px;
     }
 
     .context-container .content-sub-context{
@@ -733,7 +750,146 @@ li{
     }
 
     .small-block{
-        width: 55px;
-        height: 55px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .block span{
+        font-size: 14px;
+        top: 32px;
+        left: -40px;
+    }
+
+    .small-block {
+        
+        position: relative;
+        top: -5px;
+        left: 65%; /* Ortalamak için */
+        z-index: 10;
+    }
+
+    .content-block-container .block:nth-child(1) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/management.png'); 
+        background-size: 30px;
+        z-index: 2;
+    }
+    
+    .content-block-container .block:nth-child(2) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/brick.png');
+        background-size: 30px;
+        z-index: 2;
+    }
+    
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/engineer.png');
+        background-size: 30px;
+        z-index: 2;
+    }
+
+    #about-btn a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    #menu.open {
+        max-height: 300px;
+    }
+
+    #navigation-wrapper {
+        padding: 10px;
+    }
+
+    #navigation-wrapper a{
+        font-size: 14px;
+    }
+
+    .context-container h1{
+        font-size: 34px;
+    }
+
+    .welcome-text{
+        font-size: 20px;
+    }
+
+    .context-container .content-sub-context{
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .block{
+        width: 200px;
+        height: 100px;
+    }
+
+    .small-block{
+        width: 75px;
+        height: 75px;
+    }
+
+    .block span{
+        font-size: 14px;
+        top: 32px;
+        left: -40px;
+    }
+
+    .small-block {
+        
+        position: relative;
+        top: -5px;
+        left: 65%; /* Ortalamak için */
+        z-index: 10;
+    }
+
+    .content-block-container .block:nth-child(1) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/management.png'); 
+        background-size: 30px;
+        z-index: 2;
+    }
+    
+    .content-block-container .block:nth-child(2) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/brick.png');
+        background-size: 30px;
+        z-index: 2;
+    }
+    
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 65px;
+        height: 65px;
+        background-image: url('img/engineer.png');
+        background-size: 30px;
+        z-index: 2;
+    }
+
+    #about-btn a{
+        font-size: 12px;
     }
 }

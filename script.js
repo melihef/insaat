@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Intersection Observer ayarları
     const observerOptions = {
-        threshold: 0.5, // Elementin %50'si göründüğünde tetiklenecek
+        threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const value = bar.getAttribute('data-value');
 
             if (entry.isIntersecting) {
-                // Element görünür olduğunda animasyonu başlat
                 animateProgress(bar, value);
             } else {
                 // Element görünürlükten çıktığında sıfırla
@@ -57,3 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Progress bar'ları observer'a ekle
     bars.forEach((bar) => observer.observe(bar));
 });
+
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+
