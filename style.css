@@ -802,24 +802,6 @@ li{
         font-size: 10px;
     }
 
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    #menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    #menu.open {
-        max-height: 300px; /* Açıldığında menünün yüksekliği */
-    }
-
     #navigation-wrapper {
         padding: 10px;
     }
@@ -890,6 +872,86 @@ li{
     }
 
     #about-btn a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 8px; /* Ana font boyutunu küçültme */
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    #menu.open {
+        max-height: 300px;
+    }
+
+    #navigation-wrapper {
+        padding: 5px;
+    }
+
+    #navigation-wrapper a {
+        font-size: 10px;
+    }
+
+    .context-container h1 {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .context-container .content-sub-context {
+        font-size: 10px;
+        padding: 20px 20px 60px 20px;
+
+    }
+
+    .block {
+        width: 110px;
+        height: 60px;
+    }
+
+    .small-block {
+        max-width: 35px;
+        max-height: 35px;
+        position: relative;
+        top: -8px;
+        left: 65%;
+        z-index: 10;
+    }
+
+    .block span {
+        font-size: 9px;
+        top: 20px;
+        left: -65px;
+    }
+
+    .content-block-container .block:nth-child(1) .small-block,
+    .content-block-container .block:nth-child(2) .small-block,
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 45px;
+        height: 45px;
+        background-size: 20px;
+    }
+
+    #about-btn a {
         font-size: 12px;
     }
 }
