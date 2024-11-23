@@ -713,7 +713,7 @@ li{
     background: none;
     border: none;
     font-size: 24px;
-    color: #000;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -817,7 +817,7 @@ li{
     }
 
     #menu.open {
-        max-height: 300px;
+        max-height: 300px; /* Açıldığında menünün yüksekliği */
     }
 
     #navigation-wrapper {

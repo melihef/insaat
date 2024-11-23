@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, user-scalable=yes">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2653e69f0b.js" crossorigin="anonymous"></script>
@@ -27,26 +28,26 @@
             <nav>
                 <!-- Hamburger Menü -->
                 <button class="menu-toggle" id="menu-toggle">
-                    <i class="fa fa-bars"></i> <!-- Font Awesome'dan Hamburger ikonu -->
+                    <i class="fa fa-bars"></i>
                 </button>
         
                 <!-- Menü -->
-                <ul id="menu" class="hidden">
-                    <li class="#Anasayfa">
+                <ul id="menu">
+                    <li>
                         <a href="#content">Anasayfa</a>
                     </li>
-                    <li class="#Hakkimizda">
-                        <a href="">Hakkımızda</a>
+                    <li>
+                        <a href="#">Hakkımızda</a>
                     </li>
-                    <li class="#İletisim">
-                        <a href="">İletişim</a>
+                    <li>
+                        <a href="#">İletişim</a>
                     </li>
-                    <li class="#Hizmetlerimiz">
-                        <a href="">Hizmetlerimiz</a>
+                    <li>
+                        <a href="#">Hizmetlerimiz</a>
                     </li>
                 </ul>
             </nav>
-        </div>                
+        </div>              
     </section>
     
     <div id="bg-video">
@@ -292,6 +293,74 @@
     </div>
 </footer>
 
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.querySelectorAll('.progress');
+
+    // Hızlandırma ve yavaşlama fonksiyonu
+    function easeInOut(timeFraction) {
+        return 0.6 * (1 - Math.cos(Math.PI * timeFraction));
+    }
+
+    // Progress bar animasyon fonksiyonu
+    function animateProgress(bar, value) {
+        let currentWidth = 0;
+        let startTime = null;
+
+        function animate(timestamp) {
+            if (!startTime) startTime = timestamp;
+
+            const timeElapsed = (timestamp - startTime) / 1000; // Geçen zamanı saniyeye çevir
+            const timeFraction = timeElapsed / 2; // 2 saniyelik süreye böl
+
+            if (timeElapsed < 2) {
+                currentWidth = Math.min(value, easeInOut(timeFraction) * value);
+                bar.style.width = currentWidth + '%';
+                requestAnimationFrame(animate);
+            } else {
+                bar.style.width = value + '%';
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    // Progress bar'ı sıfırlama fonksiyonu
+    function resetProgress(bar) {
+        bar.style.width = '0%';
+    }
+
+    // Intersection Observer ayarları
+    const observerOptions = {
+        threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const bar = entry.target;
+            const value = bar.getAttribute('data-value');
+
+            if (entry.isIntersecting) {
+                animateProgress(bar, value);
+            } else {
+                // Element görünürlükten çıktığında sıfırla
+                resetProgress(bar);
+            }
+        });
+    }, observerOptions);
+
+    // Progress bar'ları observer'a ekle
+    bars.forEach((bar) => observer.observe(bar));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+});
+</script>
 
 </body>
 </html>

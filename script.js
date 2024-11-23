@@ -57,10 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     bars.forEach((bar) => observer.observe(bar));
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("open");
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
 });
+
+
 
