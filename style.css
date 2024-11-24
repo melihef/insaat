@@ -1056,7 +1056,7 @@ li{
         transform: translate(-50%, -50%);
         width: 100vw;
         height: 100vh;
-        object-fit: cover; /* Videonun ekranı düzgün kaplaması için */
+        object-fit: cover;
         z-index: -1;
     }
 
