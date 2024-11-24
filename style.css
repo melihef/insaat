@@ -1323,14 +1323,14 @@ li{
 
 @media (max-width: 300px) {
     html {
-        font-size: 8px;
+        font-size: 12px; /* Küçük font boyutları yerine daha okunabilir bir boyut */
     }
 
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        overflow-x: hidden;
+        overflow-x: auto; /* overflow-x: hidden yerine auto kullanıldı */
     }
 
     #navigation-wrapper {
@@ -1379,12 +1379,12 @@ li{
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; /* video genişliği ve yüksekliği bozulmadan alanı kaplar */
         z-index: -1;
     }
 
     .context-container h1 {
-        font-size: 14px; /* 16px yerine biraz daha küçük */
+        font-size: 16px; /* Başlık font boyutu arttırıldı */
         color: white;
     }
 
