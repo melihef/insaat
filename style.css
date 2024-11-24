@@ -75,7 +75,7 @@ li{
 
 #navigation-wrapper ul a:hover{
     transition: .1s all;
-    color: black;
+    color: rgb(15, 15, 15);
 }
 
 .content{
