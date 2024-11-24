@@ -1060,6 +1060,10 @@ li{
         z-index: -1;
     }
 
+    nav{
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
         background: none;
