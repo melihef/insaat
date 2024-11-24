@@ -1049,30 +1049,22 @@ li{
         overflow-x: hidden;
     }
 
-    video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
+    #navigation-wrapper {
+        padding: 10px;
     }
 
-    nav{
+    nav {
         width: 100%;
     }
 
     .menu-toggle {
-        display: block;
+        font-size: 18px;
+        color: white;
         background: none;
         border: none;
-        font-size: 20px;
-        color: white; /* Buton rengi okunaklı olmalı */
         cursor: pointer;
-        margin: 10px;
-        margin: 0 auto;
+        margin: 5px;
+        display: block;
     }
 
     #menu {
@@ -1082,86 +1074,87 @@ li{
     }
 
     #menu.open {
-        max-height: 250px;
-        background-color: rgba(0, 0, 0, 0.8); /* Menü açıldığında arka plan */
+        max-height: 200px;
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     #menu li {
-        list-style: none;
-        padding: 10px;
+        padding: 8px;
+        font-size: 8px;
     }
 
     #menu a {
-        font-size: 8px;
         color: white;
         text-decoration: none;
     }
 
-    #navigation-wrapper {
-        padding: 10px;
-        background: transparent;
-    }
-
-    .context-container {
-        position: relative;
-        z-index: 5;
-        text-align: center;
-        padding: 10px 20px;
+    #bg-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
 
     .context-container h1 {
-        font-size: 30px;
+        font-size: 16px;
         color: white;
-        margin-bottom: 10px;
-    }
-
-    .welcome-text {
-        font-size: 12px;
-        color: white;
-        margin-bottom: 20px;
     }
 
     .context-container .content-sub-context {
-        font-size: 10px;
+        font-size: 8px;
         color: white;
-        padding: 20px 20px 20px 20px;
+        padding: 15px;
     }
 
     .block {
-        width: 100px;
-        height: 50px;
-        margin: 10px auto;
+        width: 80px;
+        height: 40px;
+        margin: 5px auto;
     }
 
     .small-block {
-        max-width: 30px;
-        max-height: 30px;
-        position: relative;
-        top: -11px;
-        left: 74%;
-        z-index: 10;
+        max-width: 20px;
+        max-height: 20px;
     }
 
-    .block span {
-        font-size: 9px;
-        top: 15px;
-        left: -60px;
+    .content-container {
+        padding: 5px;
     }
 
     #about-btn {
         position: absolute;
-        top: 300px;
+        top: 270px;
         border: 1px solid black;
         padding: 5px 10px;
     }
 
     #about-btn a {
-        font-size: 10px;
-        padding: 9px;
+        font-size: 8px;
     }
 
-    .control-block {
-        font-size: 9px;
-        margin-left: 0;
+    #section-2, #section-3, #section-4, #section-5 {
+        padding: 10px;
+    }
+
+    .footer-section ul li a {
+        font-size: 8px;
+    }
+
+    .footer-bottom p {
+        font-size: 8px;
+    }
+
+    .content-block .image-placeholder {
+        height: 50px;
+        width: 50px;
+        background-color: #ddd;
+    }
+
+    .footer-container {
+        padding: 10px;
     }
 }
