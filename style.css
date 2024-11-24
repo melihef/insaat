@@ -1045,6 +1045,8 @@ li{
     body {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     video {
@@ -1058,13 +1060,6 @@ li{
         z-index: -1;
     }
 
-    nav {
-        width: 30px;
-        position: absolute;
-        top: 0;
-        z-index: 10; /* Menü video üstünde görünür */
-    }
-
     .menu-toggle {
         display: block;
         background: none;
@@ -1073,6 +1068,7 @@ li{
         color: white; /* Buton rengi okunaklı olmalı */
         cursor: pointer;
         margin: 10px;
+        margin: 0 auto;
     }
 
     #menu {
