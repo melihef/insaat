@@ -1217,6 +1217,7 @@ li{
 
     #menu.open {
         width: 100%;
+        gap: 1px;
     }
 
     #menu li {
