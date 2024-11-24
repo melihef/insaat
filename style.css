@@ -1217,8 +1217,8 @@ li{
     }
 
     #menu.open {
-        max-height: 200px;
-        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     #menu li {
@@ -1358,8 +1358,8 @@ li{
     }
 
     #menu.open {
-        max-height: 200px;
-        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     #menu li {
