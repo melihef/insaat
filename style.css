@@ -1212,7 +1212,6 @@ li{
 
     #menu {
         max-height: 0;
-        overflow: hidden;
         transition: max-height 0.3s ease-in-out;
     }
 
@@ -1253,6 +1252,10 @@ li{
         padding: 15px;
     }
 
+    .content-block-container{
+        flex-direction: column;
+    }
+
     .block {
         max-width: 100px;
         height: 50px;
@@ -1280,11 +1283,12 @@ li{
     #about-btn {
         border: 1px solid black;
         margin-top: 0;
+        top: 440px;
     }
 
     #about-btn a {
         font-size: 8px;
-        padding: 6px;
+        padding: 6px 12px;
     }
 
     #section-2, #section-3, #section-4, #section-5 {
@@ -1396,6 +1400,10 @@ li{
         color: white;
     }
 
+    .content-block-container{
+        flex-direction: column;
+    }
+
     .context-container .content-sub-context {
         font-size: 9px;
         color: white;
@@ -1427,10 +1435,9 @@ li{
     }
 
     #about-btn {
-        position: absolute;
-        top: 270px;
+        top: 450px;
         border: 1px solid black;
-        padding: 2px;
+        padding: 2px 10px;
     }
 
     #about-btn a {
