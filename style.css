@@ -1310,3 +1310,135 @@ li{
         margin-left: 0;
     }
 }
+
+@media (max-width: 298px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #navigation-wrapper {
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        font-size: 18px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        display: block;
+    }
+
+    #menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    #menu.open {
+        max-height: 200px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #menu li {
+        padding: 8px;
+        font-size: 8px;
+    }
+
+    #menu a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #bg-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .context-container h1 {
+        font-size: 16px;
+        color: white;
+    }
+
+    .context-container .content-sub-context {
+        font-size: 8px;
+        color: white;
+        padding: 15px;
+    }
+
+    .block {
+        width: 80px;
+        height: 40px;
+        margin: 5px auto;
+    }
+
+    .small-block {
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    .content-container {
+        padding: 5px;
+    }
+
+    #about-btn {
+        position: absolute;
+        top: 270px;
+        border: 1px solid black;
+        padding: 5px 10px;
+    }
+
+    #about-btn a {
+        font-size: 8px;
+    }
+
+    #section-2, #section-3, #section-4, #section-5 {
+        padding: 10px;
+    }
+
+    .footer-section ul li a {
+        font-size: 8px;
+    }
+
+    .footer-bottom p {
+        font-size: 8px;
+    }
+
+    .content-block .image-placeholder {
+        height: 200px;
+        width: 200px;
+        background-color: #ddd;
+    }
+
+    .content-block p{
+        font-size: 12px;
+    }
+
+    .footer-container {
+        padding: 10px;
+    }
+
+    .control-block{
+        width: 100%;
+        font-size: 10px;
+        margin-left: 0;
+    }
+}
