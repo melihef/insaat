@@ -752,7 +752,7 @@ li{
     .block span{
         font-size: 14px;
         top: 32px;
-        left: -40px;
+        left: 10px;
     }
 
     .small-block {
@@ -901,6 +901,10 @@ li{
     .content-right img {
         max-width: 100%;
         margin-top: 20px;
+    }
+
+    .control-block{
+        font-size: 16px;
     }
 }
 
@@ -1176,8 +1180,8 @@ li{
     }
 }
 
-@media (max-width: 320px) {
-    html {
+@media (max-width: 375px){
+    html{
         font-size: 8px;
     }
 
@@ -1185,6 +1189,7 @@ li{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     #navigation-wrapper {
@@ -1238,25 +1243,34 @@ li{
     }
 
     .context-container h1 {
-        font-size: 16px;
+        font-size: 38px;
         color: white;
     }
 
     .context-container .content-sub-context {
-        font-size: 8px;
+        font-size: 9px;
         color: white;
         padding: 15px;
     }
 
     .block {
-        width: 80px;
-        height: 40px;
+        max-width: 100px;
+        height: 50px;
         margin: 5px auto;
+        padding: 0px;
+    }
+
+    .block span{
+        max-width: 70px;
+        left: -4px;
+        top: 16px;
     }
 
     .small-block {
-        max-width: 20px;
-        max-height: 20px;
+        max-width: 30px;
+        max-height: 30px;
+        top: 9px;
+        left: 63px;
     }
 
     .content-container {
@@ -1288,11 +1302,11 @@ li{
 
     .content-block .image-placeholder {
         height: 200px;
-        width: 200px;
+        width: 100%;
         background-color: #ddd;
     }
 
-    .content-block p{
+    .content-block p {
         font-size: 12px;
     }
 
@@ -1300,22 +1314,23 @@ li{
         padding: 10px;
     }
 
-    .control-block{
+    .control-block {
         width: 100%;
         font-size: 10px;
         margin-left: 0;
     }
 }
 
-@media (max-width: 298px) {
+@media (max-width: 300px) {
     html {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     #navigation-wrapper {
@@ -1369,7 +1384,7 @@ li{
     }
 
     .context-container h1 {
-        font-size: 16px;
+        font-size: 14px; /* 16px yerine biraz daha küçük */
         color: white;
     }
 
@@ -1380,7 +1395,7 @@ li{
     }
 
     .block {
-        width: 80px;
+        width: 100%;
         height: 40px;
         margin: 5px auto;
     }
@@ -1419,11 +1434,11 @@ li{
 
     .content-block .image-placeholder {
         height: 200px;
-        width: 200px;
+        width: 100%;
         background-color: #ddd;
     }
 
-    .content-block p{
+    .content-block p {
         font-size: 12px;
     }
 
@@ -1431,7 +1446,7 @@ li{
         padding: 10px;
     }
 
-    .control-block{
+    .control-block {
         width: 100%;
         font-size: 10px;
         margin-left: 0;
