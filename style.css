@@ -1278,14 +1278,13 @@ li{
     }
 
     #about-btn {
-        position: absolute;
-        top: 270px;
         border: 1px solid black;
-        padding: 5px 10px;
+        margin-top: 0;
     }
 
     #about-btn a {
         font-size: 8px;
+        padding: 6px;
     }
 
     #section-2, #section-3, #section-4, #section-5 {
@@ -1319,18 +1318,27 @@ li{
         font-size: 10px;
         margin-left: 0;
     }
+
+    .bar-container .label{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .bar-container .progress{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 300px) {
-    html {
-        font-size: 12px; /* Küçük font boyutları yerine daha okunabilir bir boyut */
+    html{
+        font-size: 12px;
     }
 
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        overflow-x: auto; /* overflow-x: hidden yerine auto kullanıldı */
+        overflow-x: hidden;
     }
 
     #navigation-wrapper {
@@ -1359,6 +1367,7 @@ li{
 
     #menu.open {
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     #menu li {
@@ -1378,30 +1387,39 @@ li{
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        object-fit: cover; /* video genişliği ve yüksekliği bozulmadan alanı kaplar */
+        object-fit: cover;
         z-index: -1;
     }
 
     .context-container h1 {
-        font-size: 16px; /* Başlık font boyutu arttırıldı */
+        font-size: 38px;
         color: white;
     }
 
     .context-container .content-sub-context {
-        font-size: 8px;
+        font-size: 9px;
         color: white;
         padding: 15px;
     }
 
     .block {
-        width: 100%;
-        height: 40px;
+        max-width: 100px;
+        height: 50px;
         margin: 5px auto;
+        padding: 0px;
+    }
+
+    .block span{
+        max-width: 70px;
+        left: -4px;
+        top: 16px;
     }
 
     .small-block {
-        max-width: 20px;
-        max-height: 20px;
+        max-width: 30px;
+        max-height: 30px;
+        top: 9px;
+        left: 63px;
     }
 
     .content-container {
@@ -1412,11 +1430,12 @@ li{
         position: absolute;
         top: 270px;
         border: 1px solid black;
-        padding: 5px 10px;
+        padding: 2px;
     }
 
     #about-btn a {
         font-size: 8px;
+        padding: 4px;
     }
 
     #section-2, #section-3, #section-4, #section-5 {
