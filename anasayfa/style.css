@@ -155,19 +155,19 @@ li{
 }
 
 .content-block-container .block:nth-child(1) .small-block {
-    background-image: url('/img/management.png'); 
+    background-image: url('/insaat/img/management.png'); 
     background-size: 65px;
     z-index: 2; /* Önde olması için z-index artırıldı */
 }
 
 .content-block-container .block:nth-child(2) .small-block {
-    background-image: url('/img/brick.png');
+    background-image: url('/insaat/img/brick.png');
     background-size: 65px;
     z-index: 2;
 }
 
 .content-block-container .block:nth-child(3) .small-block {
-    background-image: url('/img/engineer.png');
+    background-image: url('/insaat/img/engineer.png');
     background-size: 65px;
     z-index: 2;
 }
@@ -408,7 +408,7 @@ li{
 }
 
 .block-1 .image-placeholder {
-    background-image: url(/img/alcipan.png);
+    background-image: url(/insaat/img/alcipan.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -417,7 +417,7 @@ li{
 }
 
 .block-2 .image-placeholder {
-    background-image: url(/img/anahtarteslim.png);
+    background-image: url(/insaat/img/anahtarteslim.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -426,7 +426,7 @@ li{
 }
 
 .block-3 .image-placeholder {
-    background-image: url(/img/discepheuyg.png);
+    background-image: url(/insaat/img/discepheuyg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -435,7 +435,7 @@ li{
 }
 
 .block-4 .image-placeholder {
-    background-image: url(/img/isyeriyapi.png);
+    background-image: url(/insaat/img/isyeriyapi.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -444,7 +444,7 @@ li{
 }
 
 .block-5 .image-placeholder {
-    background-image: url(/img/kabainceinsaat.png);
+    background-image: url(/insaat/img/kabainceinsaat.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -453,7 +453,7 @@ li{
 }
 
 .block-6 .image-placeholder {
-    background-image: url(/img/mimariproje.png);
+    background-image: url(/insaat/img/mimariproje.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -462,7 +462,7 @@ li{
 }
 
 .block-7 .image-placeholder {
-    background-image: url(/img/pvc.png);
+    background-image: url(/insaat/img/pvc.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -471,7 +471,7 @@ li{
 }
 
 .block-8 .image-placeholder {
-    background-image: url(/img/pvcdograma.png);
+    background-image: url(/insaat/img/pvcdograma.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
