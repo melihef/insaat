@@ -65,6 +65,3 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("open");
     });
 });
-
-
-
