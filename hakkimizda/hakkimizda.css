@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     color: rgb(255, 255, 255);
@@ -75,12 +79,6 @@ li{
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-.background-block{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, .5);
 }
 
 .header-block, h1{
@@ -273,11 +271,16 @@ li{
         font-size: 16px;
     }
 
+    #navigation-wrapper{
+        padding: 20px;
+    }
+
     .header-block, h1{
         width: auto;
         left: 10px;
+        top: 100px;
         font-size: 2.5rem;
-        animation: fadeIn 2s ease-in-out forwards;
+        animation: fadeIn 2s ease-in-out forwards, slideY2 2s ease-in-out alternate;
         opacity: 0;
     }
 
@@ -290,11 +293,20 @@ li{
         }
     }
 
+    @keyframes slideY2{
+        0%{
+            top: 200px;
+        }
+        100%{
+            top: 100px;
+        }
+    }
+
     .about-us-block {
-        width: 45%;
+        width: 40%;
         font-size: 10px;
         right: 10%;
-        top: 90px;
+        top: 65px;
         padding: 10px;
     }
 
@@ -315,48 +327,29 @@ li{
 
 /* Büyük telefonlar ve küçük tabletler (768px ve aşağısı) */
 @media (max-width: 768px) {
-    #navigation-wrapper{
-        padding: 4px;
-    }
 
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        margin: 0 auto;
-        color: white;
-    }
-
-    #menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    #menu.open {
-        max-height: 300px;
-    }
-
-    .header-block {
-        font-size: 1.5rem;
+    .header-block h1{
+        font-size: 2rem;
         position: absolute;
-        top: 35px;
-        left: 55px;
-        padding: 10px;
-        animation: none;
+        left: -150px;
+        top: 170px;
+        animation: slideY2 2s ease-in-out alternate;
         text-align: center;
+        opacity: 1;
+    }
+
+    @keyframes slideY2{
+        0%{
+            top: 200px;
+        }
+        100%{
+            top: 100px;
+        }
     }
 
     #navigation-wrapper ul {
-        flex-direction: column;
         align-items: center;
         gap: 20px;
-    }
-
-    .menu-toggle {
-        display: block;
     }
 
     .header-block {
@@ -369,7 +362,7 @@ li{
         width: 60%;
         font-size: 10px;
         padding: 20px;
-        left: 150px;
+        left: 300px;
     }
 
     #section-2 {
@@ -445,9 +438,15 @@ li{
         font-size: 20px;
     }
 
+    #section-2 .connection-block{
+        width: 145px;
+        padding: 10px 40px;
+        left:200px;
+    }
+
     #section-2 .connection-block a {
-        padding: 10px 50px;
         font-size: 14px;
+        padding: 0;
     }
 }
 
@@ -503,6 +502,17 @@ li{
         padding: 8px 30px;
         font-size: 12px;
     }
+
+    #section-2 .connection-block{
+        width: 156px;
+        padding: 10px 50px;
+        left:60px;
+    }
+
+    #section-2 .connection-block a {
+        font-size: 14px;
+        padding: 0;
+    }
 }
 
 /* Çok küçük telefonlar (300px ve aşağısı) */
@@ -534,24 +544,37 @@ li{
     #menu.open {
         max-height: 300px;
     }
-
-    #section-1 .header-block, h1{
-        font-size: 2rem;
+    
+    #section-1 .header-block {
         position: absolute;
-        top: 17px;
-        left: 35px;
-        padding: 10px;
-        animation: none;
+        top: 80px; /* Nav barın altına yerleşmesi için üstten 80px boşluk bıraktım */
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+        opacity: 1;
     }
+    
+    #section-1 .header-block h1 {
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        padding: 0;
+        animation: normal;
+    }    
 
     .about-us-block {
-        font-size: 7.9px;
+        font-size: 7px;
         padding: 15px;
-        left: 15px;
+        left: 32px;
+    }
+
+    #section-2{
+        padding:80px 40px;
     }
 
     #section-2 .p-paragraph {
         font-size: 16px;
+        top: 20px;
     }
 
     #section-2 .connection-block a {
@@ -561,5 +584,13 @@ li{
 
     .footer-section {
         font-size: 0.7rem;
+    }
+
+    #section-2 .connection-block{
+        padding: 0px;
+        width: 137px;
+        justify-content: center;
+        bottom: 30px;
+        left: 38px;
     }
 }
