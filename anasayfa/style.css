@@ -780,6 +780,11 @@ li{
         z-index: 2;
     }
 
+    .content-container .content-block-container .brick-context-span-2{
+        top: 32px;
+        left: 22px;
+    }
+
     #about-btn a{
         font-size: 12px;
     }
@@ -1075,9 +1080,17 @@ li{
     #bar1{
         max-width: 5000px;
     }
+
+    #bar2{
+        max-width:6000px;
+    }
     
     #bar3{
         max-width: 600px;
+    }
+
+    .learn-more{
+        font-size: 16px;
     }
 }
 
@@ -1179,6 +1192,11 @@ li{
     .content-container .content-block-container .engineer-context-span-3 {
     right: -20px;
     font-size: 11px;
+    }
+
+    .content-container .content-block-container .brick-context-span-2{
+        top: 24px;
+        left: -70px;
     }
 
     .content #about-btn{
@@ -1355,6 +1373,7 @@ li{
 
     .content-container .content-block-container .brick-context-span-2{
         top: 24px;
+        left: -70px;
     }
 
     .block {
@@ -1438,6 +1457,10 @@ li{
     
     #bar1{
         max-width: 5000px;
+    }
+
+    #bar2{
+        max-width:6000px;
     }
     
     #bar3{
