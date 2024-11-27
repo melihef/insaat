@@ -1858,22 +1858,25 @@ li{
 
     .block {
         max-width: 300px;
-        height: 60px;
+        height: 70px;
         margin: 5px auto;
         padding: 0px;
     }
 
     .block span{
         max-width: 70px;
-        left: 0px;
-        top: 20px;
+        left: 10px;
+        bottom: 20px;
     }
 
-    .small-block {
-        max-width: 35px;
-        max-height: 35px;
-        top: 12px;
-        left: 68px;
+    .content-block-container .block:nth-child(1) .small-block,
+    .content-block-container .block:nth-child(2) .small-block,
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 45px;
+        height: 45px;
+        background-size: 30px;
+        top: 10px;
+        left: 95px;
     }
 
     .content-container {
@@ -1881,14 +1884,14 @@ li{
     }
 
     .content #about-btn{
-        top: 500px;
+        top: 530px;
         border: 1px solid black;
-        padding: 10px 20px;
+        padding: 0px 10px;
     }
 
     #about-btn a {
         font-size: 10px;
-        padding: 4px;
+        padding: 1px;
     }
 
     #section-2, #section-3, #section-4, #section-5 {
