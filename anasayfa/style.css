@@ -1598,7 +1598,7 @@ li{
     }
 }
 
-@media (max-width: 324px){
+@media (max-width: 318px){
     html{
         font-size: 12px;
     }
@@ -1667,7 +1667,7 @@ li{
     .context-container .content-sub-context {
         font-size: 9px;
         color: white;
-        padding: 15px;
+        padding: 20px;
     }
 
     .content-block-container{
@@ -1687,13 +1687,13 @@ li{
     .content-container .content-block-container .management-context-span-1,
     .content-container .content-block-container .brick-context-span-2,
     .content-container .content-block-container .engineer-context-span-3 {
-        left: 10px;
-        top: 12px;
-        font-size: 14px;
+        left: -75px;
+        top: 24px;
+        font-size: 11px;
     }
 
     .content-container .content-block-container .brick-context-span-2{
-        top: 12px;
+        top: 24px;
     }
 
     .block {
