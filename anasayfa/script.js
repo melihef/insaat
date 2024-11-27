@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hızlandırma ve yavaşlama fonksiyonu
     function easeInOut(timeFraction) {
-        return 0.6 * (1 - Math.cos(Math.PI * timeFraction));
+        return 0.7 * (1 - Math.cos(Math.PI * timeFraction));
     }
 
     // Progress bar animasyon fonksiyonu
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!startTime) startTime = timestamp;
 
             const timeElapsed = (timestamp - startTime) / 1000; // Geçen zamanı saniyeye çevir
-            const timeFraction = timeElapsed / 2; // 2 saniyelik süreye böl
+            const timeFraction = timeElapsed / 3; // 2 saniyelik süreye böl
 
             if (timeElapsed < 2) {
                 currentWidth = Math.min(value, easeInOut(timeFraction) * value);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Intersection Observer ayarları
     const observerOptions = {
-        threshold: 0.5,
+        threshold: 1,
     };
 
     const observer = new IntersectionObserver((entries) => {
