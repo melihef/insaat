@@ -1479,24 +1479,33 @@ li{
         flex-direction: column;
     }
 
+    .content-block-container .block:nth-child(1) .small-block,
+    .content-block-container .block:nth-child(2) .small-block,
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 45px;
+        height: 45px;
+        background-size: 30px;
+        top: 15px;
+        left: 95px;
+    }
+
+    .content-container .content-block-container .management-context-span-1,
+    .content-container .content-block-container .brick-context-span-2,
+    .content-container .content-block-container .engineer-context-span-3 {
+        left: -75px;
+        top: 25px;
+        font-size: 12px;
+    }
+
+    .content-container .content-block-container .brick-context-span-2{
+        top: 24px;
+    }
+
     .block {
-        max-width: 100px;
-        height: 50px;
+        max-width: 150px;
+        height: 75px;
         margin: 5px auto;
         padding: 0px;
-    }
-
-    .block span{
-        max-width: 70px;
-        left: -4px;
-        top: 16px;
-    }
-
-    .small-block {
-        max-width: 30px;
-        max-height: 30px;
-        top: 9px;
-        left: 63px;
     }
 
     .content-container {
@@ -1506,7 +1515,7 @@ li{
     .content #about-btn {
         border: 1px solid black;
         margin-top: 0;
-        top: 440px;
+        top: 545px;
     }
 
     #about-btn a {
@@ -1665,18 +1674,46 @@ li{
         flex-direction: column;
     }
 
+    .content-block-container .block:nth-child(1) .small-block,
+    .content-block-container .block:nth-child(2) .small-block,
+    .content-block-container .block:nth-child(3) .small-block {
+        width: 45px;
+        height: 45px;
+        background-size: 30px;
+        top: 15px;
+        left: 95px;
+    }
+
+    .content-container .content-block-container .management-context-span-1,
+    .content-container .content-block-container .brick-context-span-2,
+    .content-container .content-block-container .engineer-context-span-3 {
+        left: 10px;
+        top: 12px;
+        font-size: 14px;
+    }
+
+    .content-container .content-block-container .brick-context-span-2{
+        top: 12px;
+    }
+
     .block {
-        max-width: 100px;
-        height: 50px;
+        max-width: 150px;
+        height: 75px;
         margin: 5px auto;
         padding: 0px;
     }
 
-    .block span{
-        max-width: 70px;
-        left: -4px;
-        top: 16px;
+    .content #about-btn {
+        border: 1px solid black;
+        margin-top: 0;
+        top: 550px;
     }
+
+    #about-btn a {
+        font-size: 8px;
+        padding: 10px 12px;
+    }
+
 
     .small-block {
         max-width: 30px;
@@ -1692,7 +1729,7 @@ li{
     .content #about-btn {
         border: 1px solid black;
         margin-top: 0;
-        top: 490px;
+        top: 550px;
     }
 
     #about-btn a {
@@ -1779,7 +1816,7 @@ li{
     }
 }
 
-@media (max-width:311px){
+@media (max-width:320px){
     .content-block-container .block:nth-child(1) .small-block,
     .content-block-container .block:nth-child(2) .small-block,
     .content-block-container .block:nth-child(3) .small-block {
