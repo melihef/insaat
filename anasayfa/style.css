@@ -1816,7 +1816,7 @@ li{
     }
 }
 
-@media (max-width:320px){
+@media (max-width: 315px){
     .content-block-container .block:nth-child(1) .small-block,
     .content-block-container .block:nth-child(2) .small-block,
     .content-block-container .block:nth-child(3) .small-block {
