@@ -726,7 +726,7 @@ li{
     }
 
     .context-container h1{
-        font-size: 34px;
+        font-size: 70px;
     }
 
     .welcome-text{
@@ -741,11 +741,6 @@ li{
     .block{
         width: 200px;
         height: 100px;
-    }
-
-    .small-block{
-        width: 75px;
-        height: 75px;
     }
 
     .block span{
@@ -765,7 +760,7 @@ li{
         width: 65px;
         height: 65px;
         background-image: url(/insaat/img/management.png); 
-        background-size: 30px;
+        background-size: 50px;
         z-index: 2;
     }
     
@@ -773,7 +768,7 @@ li{
         width: 65px;
         height: 65px;
         background-image: url(/insaat/img/brick.png);
-        background-size: 30px;
+        background-size: 50px;
         z-index: 2;
     }
     
@@ -781,7 +776,7 @@ li{
         width: 65px;
         height: 65px;
         background-image: url(/insaat/img/engineer.png);
-        background-size: 30px;
+        background-size: 50px;
         z-index: 2;
     }
 
@@ -911,145 +906,6 @@ li{
 
     .control-block{
         font-size: 14px;
-    }
-}
-
-@media (max-width: 578px) {
-    html {
-        font-size: 8px;
-    }
-
-    video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    #menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    #menu.open {
-        max-height: 300px;
-    }
-
-    #navigation-wrapper {
-        padding:6px;
-    }
-
-    #navigation-wrapper a {
-        font-size: 10px;
-    }
-
-    .context-container h1 {
-        font-size: 34px;
-        padding: 14px;
-    }
-
-    .welcome-text {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .context-container .content-sub-context {
-        font-size: 10px;
-        padding: 20px 20px 50px 20px;
-    }
-
-    .block {
-        width: 110px;
-        height: 60px;
-    }
-
-    .small-block {
-        max-width: 35px;
-        max-height: 35px;
-        position: relative;
-        top: -8px;
-        left: 73%;
-        z-index: 10;
-    }
-
-    .block span {
-        font-size: 9px;
-        top: 20px;
-        left: -65px;
-    }
-
-    .content-block-container .block:nth-child(1) .small-block,
-    .content-block-container .block:nth-child(2) .small-block,
-    .content-block-container .block:nth-child(3) .small-block {
-        width: 45px;
-        height: 45px;
-        background-size: 20px;
-    }
-
-    .content-container .content-block-container .management-context-span-1,
-    .content-container .content-block-container .brick-context-span-2,
-    .content-container .content-block-container .engineer-context-span-3 {
-    right: -25px;
-    font-size: 8px;
-    }
-
-    #about-btn{
-        border: 1px solid black;
-        position: absolute;
-        top: 350px;
-    }
-
-    #about-btn a {
-        font-size: 10px;
-        padding: 9px;
-    }
-
-    #section-2 {
-        padding: 15px;
-    }
-
-    .content-left h2 {
-        font-size: 3rem;
-    }
-
-    .content-left h5 {
-        font-size: 1.5rem;
-    }
-
-    .content-left p {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-
-    .content-right img {
-        border-radius: 8px;
-        max-width: 60%;
-        margin: 0;
-    }
-
-    .control-block{
-        font-size:  12px;
-    }
-
-    .learn-more a{
-        font-size: 16px;
     }
 }
 
@@ -1817,6 +1673,12 @@ li{
 }
 
 @media (max-width: 312px){
+    .context-container h1 {
+        font-size: 40px;
+        margin-top: -40px;
+        color: white;
+    }
+
     .content-block-container .block:nth-child(1) .small-block,
     .content-block-container .block:nth-child(2) .small-block,
     .content-block-container .block:nth-child(3) .small-block {
@@ -1917,11 +1779,13 @@ li{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        background-position: left;
         z-index: -1;
     }
 
     .context-container h1 {
-        font-size: 38px;
+        font-size: 40px;
+        margin-top: -40px;
         color: white;
     }
 
@@ -1943,8 +1807,7 @@ li{
     }
 
     .block span{
-        max-width: 70px;
-        left: 10px;
+        left: 200px;
         bottom: 20px;
     }
 
@@ -1956,6 +1819,14 @@ li{
         background-size: 30px;
         top: 10px;
         left: 95px;
+    }
+
+    .content-container .content-block-container .management-context-span-1,
+    .content-container .content-block-container .brick-context-span-2,
+    .content-container .content-block-container .engineer-context-span-3 {
+        right: -10px;
+        top: 22px;
+        font-size: 10px;
     }
 
     .content-container {
