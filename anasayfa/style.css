@@ -1224,7 +1224,7 @@ li{
 
 @media (max-width: 480px) {
     html {
-        font-size: 8px; /* Ana font boyutunu küçültme */
+        font-size: 10px; /* Ana font boyutunu küçültme */
     }
 
     video {
@@ -1233,7 +1233,7 @@ li{
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100vw;
-        height: 100vh;
+        height: 110vh;
         object-fit: cover;
         z-index: -1;
     }
@@ -1283,6 +1283,10 @@ li{
         padding: 20px 20px 50px 20px;
     }
 
+    .content-block-container{
+        flex-direction: column;
+    }
+
     .block {
         width: 110px;
         height: 60px;
@@ -1318,10 +1322,10 @@ li{
     font-size: 8px;
     }
 
-    #about-btn{
+    .content #about-btn{
         border: 1px solid black;
         position: absolute;
-        top: 350px;
+        top: 420px;
     }
 
     #about-btn a {
@@ -1488,7 +1492,7 @@ li{
         padding: 5px;
     }
 
-    #about-btn {
+    .content #about-btn {
         border: 1px solid black;
         margin-top: 0;
         top: 440px;
@@ -1558,6 +1562,196 @@ li{
     
     #bar1{
         max-width: 5000px;
+    }
+    
+    #bar3{
+        max-width: 600px;
+    }
+
+    .bar-container .label{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .bar-container .progress{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 324px){
+    html{
+        font-size: 12px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #navigation-wrapper {
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        font-size: 18px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        display: block;
+    }
+
+    #menu {
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    #menu.open {
+        width: 100%;
+        gap: 1px;
+    }
+
+    #menu li {
+        padding: 8px;
+        font-size: 8px;
+    }
+
+    #menu a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #bg-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .context-container h1 {
+        font-size: 38px;
+        color: white;
+    }
+
+    .context-container .content-sub-context {
+        font-size: 9px;
+        color: white;
+        padding: 15px;
+    }
+
+    .content-block-container{
+        flex-direction: column;
+    }
+
+    .block {
+        max-width: 100px;
+        height: 50px;
+        margin: 5px auto;
+        padding: 0px;
+    }
+
+    .block span{
+        max-width: 70px;
+        left: -4px;
+        top: 16px;
+    }
+
+    .small-block {
+        max-width: 30px;
+        max-height: 30px;
+        top: 9px;
+        left: 63px;
+    }
+
+    .content-container {
+        padding: 5px;
+    }
+
+    .content #about-btn {
+        border: 1px solid black;
+        margin-top: 0;
+        top: 490px;
+    }
+
+    #about-btn a {
+        font-size: 8px;
+        padding: 10px 12px;
+    }
+
+    #section-2, #section-3, #section-4, #section-5 {
+        padding: 10px;
+    }
+
+    .footer-section ul li a {
+        font-size: 8px;
+    }
+
+    .footer-bottom p {
+        font-size: 8px;
+    }
+
+    .content-block .image-placeholder {
+        height: 200px;
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    .content-block p {
+        font-size: 12px;
+    }
+
+    .footer-container {
+        padding: 10px;
+    }
+
+    .control-block {
+        width: 100%;
+        font-size: 10px;
+        margin-left: 0;
+    }
+
+    #section-3{
+        height: 450px;
+        flex-direction: column;
+    }
+
+    #section-3 .leadership-content-left{
+        width: 100%;
+    }
+
+    #section-3 .control-block{
+        font-size: 11px;
+    }
+
+    .bar .progress{
+        max-width: 170px;
+    }
+
+    .bar {
+        width: 100%;
+        background-color: #e4e4e4;
+        overflow: hidden;
+        margin-bottom: 15px;
+        border-radius: 1px;
+    }
+    
+    #bar1{
+        max-width: 5000px;
+    }
+
+    #bar2{
+        max-width:6000px;
     }
     
     #bar3{
@@ -1675,7 +1869,7 @@ li{
         padding: 5px;
     }
 
-    #about-btn {
+    .content #about-btn{
         top: 500px;
         border: 1px solid black;
         padding: 5px 10px;
