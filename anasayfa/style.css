@@ -1047,7 +1047,7 @@ li{
     }
 }
 
-@media (max-width: 596px) {
+@media (max-width: 612px) {
     html {
         font-size: 8px; /* Ana font boyutunu küçültme */
     }
@@ -1099,8 +1099,9 @@ li{
     }
 
     .context-container h1{
-        font-size: 26px;
+        font-size: 30px;
         padding: 0;
+        padding-bottom: 20px;
     }
 
     .welcome-text{
@@ -1113,7 +1114,7 @@ li{
     }
 
     .content #about-btn{
-        top: 160px;
+        top: 195px;
     }
 
     .block {
